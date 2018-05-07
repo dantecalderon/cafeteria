@@ -1,3 +1,8 @@
+
+.contenedor {
+	@include xy-grid-container;
+}
+
 .site-header {
 	background-image: url(../img/coffe-background.jpg);
 
@@ -11,5 +16,45 @@
 	height: 100vh;
 	min-height: rem-calc(600);
 	background-size: cover;
+
+	.header-superior {
+		@include xy-grid();
+		@include flex-align(center, top);
+
+		@include breakpoint(medium) {
+			@include flex-align(justify, top);
+		}
+
+		.logo {
+			@include xy-cell(6);
+			@include breakpoint(medium) {
+				@include xy-cell(25%); 
+			}
+		}
+	}
+}
+
+
+.navegaciones {
+	@include xy-cell();
+	@include breakpoint(medium) {
+		@include xy-cell(auto);
+
+	}
+
+	.menu-principal {
+		@include menu-base();
+		@include flex-align(right, middle);
+
+		li {
+
+			a {
+				@include text-transform(uppercase);
+				@include font-bold(700);
+				font-size: rem-calc(16);
+			}
+		}
+	}
+
 
 }
