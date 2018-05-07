@@ -1,8 +1,14 @@
 
+// fuente de google
+$bellefair: 'Bellefair', serif;
+
 .contenedor {
 	@include xy-grid-container;
 }
 
+.icono-menu {
+	@include hamburger($white, $white, 50px, 32px, 6px);
+}
 .site-header {
 	.contenedor {
 		z-index: 1;
@@ -61,6 +67,17 @@
 		@include box(100%, 100%);
 
 	}
+	.title-bar {
+		background-color: $primary-color;
+		justify-content: flex-end;
+	}
+	.title-bar-title {
+
+		// Mi estilo para que este en el centro
+		//margin-right: rem-calc(20);
+		margin: 0 auto;
+		padding-left: 50px;
+	}
 }
 
 
@@ -72,10 +89,19 @@
 	}
 
 	.menu-principal {
+
+		@include breakpoint(small only) {
+			background-color: darken($primary-color, 10%);
+		}
 		@include menu-base();
 		@include flex-align(right, middle);
 
 		li {
+			@include breakpoint(small only) {
+				width: 100%;
+				text-align: center;
+
+			}
 
 			a {
 				@include text-transform(uppercase);
