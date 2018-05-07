@@ -1,0 +1,15 @@
+.site-header {
+	background-image: url(../img/coffe-background.jpg);
+
+	@include breakpoint(medium) {
+		background-image: url(../img/coffe-background.jpg);		
+	}
+	@include breakpoint(large) {
+		background-image: url(../img/coffe-background.jpg);
+	}
+	background-repeat: no-repeat;
+	height: 100vh;
+	min-height: rem-calc(600);
+	background-size: cover;
+
+}
