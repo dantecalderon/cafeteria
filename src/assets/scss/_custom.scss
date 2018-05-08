@@ -113,3 +113,43 @@ $bellefair: 'Bellefair', serif;
 
 
 }
+
+
+.site-footer {
+	background-color: $primary-color;
+	.contenedor {
+		background-color: white;
+		.contenido-footer {
+			@include xy-grid();
+			@include padding(2, 2, 4, 2)
+			.footer-box {
+				@include xy-cell();
+				@include margin(null, null, 2)
+				@include breakpoint(medium) {
+					@include xy-cell(4);
+				}
+				text-align: center;
+
+				h3 {
+					font-family: $bellefair;
+					color: $secondary-color;
+					@include text-transform(uppercase);
+				}
+
+				p {
+					font-size: rem-calc(18);
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		margin: 0;
+		text-align: center;
+		@include padding(1, null, 1, null)
+		@include font-bold(900);
+		color: white;
+		font-size: rem-calc(15);
+	}
+}
