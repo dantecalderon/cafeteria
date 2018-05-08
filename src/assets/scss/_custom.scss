@@ -480,12 +480,25 @@ blockquote {
 
 /** GALERIA **/
 
+@mixin img-grid() {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+
+	// para que la imagen no se alarg
+}
+
 .galeria-superior {
 	@include xy-grid();
-	.izquierda {
-		
+	.izquierda {		
 		@include xy-cell(3, true, $grid-margin-gutters, margin, left);
-
+		.imagen {
+			height: 100%;
+			img {
+				@include img-grid();
+			}
+		}
 	}
 
 	.derecha {
@@ -498,6 +511,7 @@ blockquote {
 				@include xy-grid();
 				flex: 1;
 				.imagen {
+
 					@include xy-cell(33.3%);
 					@include between(1, 2) {
 						@include xy-gutters($grid-margin-gutters, margin,bottom);					
@@ -507,6 +521,10 @@ blockquote {
 					}
 					&.span {
 						@include xy-cell(66.6%);
+					}
+
+					img {
+						@include img-grid();
 					}
 				}
 			}
