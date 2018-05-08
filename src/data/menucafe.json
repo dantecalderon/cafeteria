@@ -1,0 +1,81 @@
+{
+	"cafe": [
+		{
+			"name": "cafe latter",
+			"price": "25",
+			"desc": "Cafe Espresso con leche caliente o evaporada"
+		},
+		{
+			"name": "cafe mocha",
+			"price": "30",
+			"desc": "Espresso con crema y crema batida"
+		},
+		{
+			"name": "cafe americano",
+			"price": "20",
+			"desc": "Cafe negro"
+		},
+		{
+			"name": "capuccino",
+			"price": "25",
+			"desc": "Espresso con una capa suave de espuma"
+		},
+		{
+			"name": "cafe mocha frio",
+			"price": "35",
+			"desc": "Espresso, hielo, con azucar quemada y mantequilla"
+		},
+		{
+			"name": "mocha frio quemado",
+			"price": "25",
+			"desc": "Cafe Espresso con leche caliente o evaporada"
+		},
+		{
+			"name": "latte con caramelo",
+			"price": "39",
+			"desc": "Espresso, leche y caramelo"
+		}		
+	],
+	"comida": [
+		{
+			"name": "sandwich de pollo y parrilla",
+			"price": "60",
+			"desc": "pechuga de pollo con pepinos caramelizados, cebolla con queso y crema y salsa de chipotle"
+		},
+		{
+			"name": "Sandwich de pechuga de pavo",
+			"price": "60",
+			"desc": "Pechuga de pavo asada y verduras"
+		},
+		{
+			"name": "Sandwich de carne de albondiga",
+			"price": "60",
+			"desc": "sandwich de carne albondiga bañada en salsa italiana de jitomate"
+		},
+		{
+			"name": "Sandwich vegetariano",
+			"price": "50",
+			"desc": "sandwich con verduras, elijelas a tu gusto"
+		},
+		{
+			"name": "Sandwich de queso",
+			"price": "50",
+			"desc": "4 quesos con pepinos y jitomate"
+		},
+		{
+			"name": "Bisquets",
+			"price": "10",
+			"desc": null
+		},
+		{
+			"name": "Pie de manzana",
+			"price": "15",
+			"desc": null
+		},
+		{
+			"name": "Galletas",
+			"price": "5",
+			"desc": null
+		}
+	]
+}

@@ -389,7 +389,6 @@ blockquote {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	height: rem-calc(600);
 	background-position: center center;
 	@include padding(1, null, 1, null);
 
@@ -415,5 +414,22 @@ blockquote {
 		content: '';
 		@include position(absolute, 0, 0, 0, 0);
 		background-color: rgba(46,23,15,.85);
+	}
+}
+
+
+.menu-cafeteria {
+	@include xy-grid();
+	color: white;
+
+	h3 {
+		width: 100%;
+	}
+
+	.listado-menu {
+		@include xy-cell();
+		@include breakpoint(medium) {
+			@include xy-cell(6);			
+		}
 	}
 }
