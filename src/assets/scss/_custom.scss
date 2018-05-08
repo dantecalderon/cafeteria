@@ -36,6 +36,10 @@ body {
 	}
 }
 
+blockquote {
+	font-size: rem-calc(30);
+}
+
 // Headings 
 .encabezado {
 	color: $secondary-color;
@@ -44,6 +48,7 @@ body {
 	margin-bottom: rem-calc(100);
 	margin-top: rem-calc(40);
 	text-align: center;
+	width: 100%;
 	span {
 		color: $primary-color;
 		font-size: rem-calc(38);
@@ -251,5 +256,22 @@ body {
 		@include font-bold(900);
 		color: white;
 		font-size: rem-calc(15);
+	}
+}
+
+
+.pagina-nosotros {
+	@include xy-grid();
+
+	.imagen-nosotros, 
+	.contenido-nosotros {
+		@include xy-cell();
+		@include breakpoint(medium) {
+			@include xy-cell(50%);
+		}
+	}
+
+	p {
+		line-height: rem-calc(40);
 	}
 }
