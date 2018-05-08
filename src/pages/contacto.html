@@ -7,7 +7,54 @@ slogan: Mejores granos, mejor cafe
 	<main class="contenido-principal pagina-{{titulo}}">
 		<h2 class="encabezado">Reserva tu <span>mesa</span></h2>
 
-		
+		<div class="formulario-reservacion">
+			<form method="post" id="formulario">
+				<div class="campo">
+					<label for="nombre">Nombre
+						<input type="text" id="name" placeholder="Nombre" name="nombre">
+					</label>
+
+				</div>
+				<div class="campo">
+					<label for="email">Email
+						<input type="email" id="email" placeholder="Email" name="email">
+					</label>
+
+				</div>
+				<div class="campo">
+					<label for="email">Para
+						<select name="numero" id="para">
+							<option value="1">1 Persona</option>
+							<option value="2">2 Personas</option>
+							<option value="3">3 Personas</option>
+							<option value="4">4 Personas</option>
+							<option value="5">5 Personas</option>
+							<option value="6">6 Personas</option>
+							<option value="7">7 Personas</option>
+							<option value="8">8 Personas</option>
+							<option value="9">9 Personas</option>
+						</select>
+					</label>
+
+				</div>
+				<div class="campo">
+					<label for="hora">Hora
+						<input type="hora" id="hora" placeholder="18:00" name="hora">
+					</label>
+
+				</div>
+				<div class="campo">
+					<label for="fecha">Fecha
+						<input type="date" id="fecha" placeholder="Fecha" name="fecha">
+					</label>
+
+				</div>
+				<div class="campo">
+					<input type="submit" value="enviar" class="button btn_enviar" id="email">
+
+				</div>
+			</form>
+		</div>
 	</main>
 
 </div>
