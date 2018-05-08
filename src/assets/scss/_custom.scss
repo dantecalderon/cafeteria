@@ -350,3 +350,70 @@ blockquote {
 		}
 	}
 }
+
+
+
+/** PAGINA MENU **/
+.pagina-menu {
+	@include xy-grid();
+	.menu-descripcion {
+		@include xy-cell();
+
+		@include breakpoint(large) {
+			@include xy-cell(5);
+		}
+
+		p {
+			text-align: center;
+			font-size: rem-calc(20);
+			line-height: rem-calc(40);
+
+
+		}
+	}
+
+	.menu-imagen {
+		@include xy-cell();
+		@include breakpoint(large) {
+			@include xy-cell(7);
+		}
+		@include flex-align(center, bottom);
+		@include flex();
+	}
+}
+
+
+
+.nuestro-menu {
+	background-image: url(../img/menu.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	height: rem-calc(600);
+	background-position: center center;
+	@include padding(1, null, 1, null);
+
+
+	h2 {
+		color: white;
+
+		span {
+			color: white;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.contenedor {
+		@include position(relative);
+		z-index: 10;
+	}
+
+	&:after {
+		content: '';
+		@include position(absolute, 0, 0, 0, 0);
+		background-color: rgba(46,23,15,.85);
+	}
+}
