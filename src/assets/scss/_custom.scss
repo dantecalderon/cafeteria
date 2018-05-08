@@ -550,8 +550,6 @@ blockquote {
 		}
 
 	}
-	
-
 
 	.derecha {
 		@include xy-cell(auto, true, $grid-margin-gutters, margin, left);
