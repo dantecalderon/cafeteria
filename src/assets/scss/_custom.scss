@@ -104,6 +104,10 @@ blockquote {
 		@include background-image(nosotros);
 	}
 
+	&.proceso {
+		@include background-image(proceso);
+	}
+
 	.header-superior {
 		@include xy-grid();
 		@include flex-align(center, top);
