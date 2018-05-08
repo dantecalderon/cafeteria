@@ -114,7 +114,32 @@ $bellefair: 'Bellefair', serif;
 
 }
 
+.menu-social {
+	@include menu-base();
+	@include flex-align(center, middle);
+	margin-bottom: rem-calc(20);
 
+	@include breakpoint(medium) {
+		@include flex-align(right, middle);		
+		margin-bottom: rem-calc(30);
+
+	}
+	a {
+		&:before {
+			display: inline-block;
+			font-family: 'Fontawesome';
+			font-size: rem-calc(30);
+			color: $white;
+			-webkit-webkit-font-smoothing: antialiased;
+			content: '\f08e';
+		}
+
+		&[href*="facebook"]::before {content: '\f082'}
+		&[href*="twitter"]::before {content: '\f099'}
+		&[href*="instagram"]::before {content: '\f16d'}
+		&[href*="youtube"]::before {content: '\f082'}
+	}
+}
 .site-footer {
 	background-color: $primary-color;
 	.contenedor {
