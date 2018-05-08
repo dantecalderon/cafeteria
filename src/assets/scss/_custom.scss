@@ -36,6 +36,17 @@ body {
 	}
 }
 
+.efecto-imagen {
+ 	@include rotate(-10);
+ 	width: 90%;
+ 	@include shadow();
+ 	border: rem-calc(10) solid white;
+
+ 	@include breakpoint(small only) {
+		margin-bottom: rem-calc(70);
+ 	}	
+}
+
 blockquote {
 	font-size: rem-calc(30);
 }
@@ -45,7 +56,7 @@ blockquote {
 	color: $secondary-color;
 	@include text-transform(uppercase);
 	font-size: rem-calc(18);
-	margin-bottom: rem-calc(100);
+	margin-bottom: rem-calc(50);
 	margin-top: rem-calc(40);
 	text-align: center;
 	width: 100%;
