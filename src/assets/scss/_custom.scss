@@ -499,7 +499,6 @@ blockquote {
 				flex: 1;
 				.imagen {
 					@include xy-cell(33.3%);
-					background-color: cornflowerblue;
 					@include between(1, 2) {
 						@include xy-gutters($grid-margin-gutters, margin,bottom);					
 					}
