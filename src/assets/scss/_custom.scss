@@ -320,6 +320,7 @@ blockquote {
 		}
 		.contenido {
 			@include xy-cell();
+			@include padding(2);
 			@include breakpoint(medium) {
 				@include xy-cell(1 of 2);
 			}
@@ -327,6 +328,21 @@ blockquote {
 			h3 {
 				color: $primary-color;
 				@include text-transform(uppercase);
+
+				&:after {
+					content: '';
+					display: block;
+					width: rem-calc(200);
+					height: rem-calc(2);
+					background-color: $secondary-color;
+					margin-top: rem-calc(10);
+				}
+			}
+
+			p {
+				font-size: rem-calc(18);
+				line-height: rem-calc(40);
+				margin-top: rem-calc(20);
 			}
 		}
 	}
