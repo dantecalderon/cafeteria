@@ -44,6 +44,22 @@ $bellefair: 'Bellefair', serif;
 			@include breakpoint(medium) {
 				@include xy-cell(25%); 
 			}
+			border: 2px dashed white;
+			border-radius: 50%;
+			padding: rem-calc(25);
+			filter: brightness(0) invert(1);
+			position: relative;
+
+			&:before {
+				content: 'Since 1856';
+				position: absolute;
+				right: 8%;
+				font-size: rem-calc(20);
+				top: 20%;
+				font-family: $bellefair;
+				background: transparent;
+
+			}
 		}
 	}
 
