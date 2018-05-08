@@ -544,14 +544,18 @@ blockquote {
 		&.span {
 			@include xy-cell(6);
 		}
-	}
-	.imagen {
-			background-color: cornflowerblue;
+
+		img {
+			@include img-grid();
 		}
+
+	}
+	
 
 
 	.derecha {
 		@include xy-cell(auto, true, $grid-margin-gutters, margin, left);
+		@include xy-grid-collapse('.derecha', margin, left);
 
 		
 		.contenido-derecha {
@@ -565,7 +569,9 @@ blockquote {
 				@include flex();
 
 				.imagen {
-					@include xy-cell(auto);
+					@include xy-cell(auto, false);
+					@include xy-grid-collapse('.imagen', margin, left right);
+					
 					@include first-child() {
 						@include xy-gutters($grid-margin-gutters, margin,bottom);		
 					}
