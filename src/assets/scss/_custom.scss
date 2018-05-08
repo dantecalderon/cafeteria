@@ -290,3 +290,44 @@ blockquote {
 		line-height: rem-calc(40);
 	}
 }
+
+
+
+/** PROCESO **/
+
+.pagina-proceso {	
+	@include breakpoint(medium) {
+		.contenedor-proceso {
+			@include odd() {
+				.imagen {
+					order: 2;
+				}
+				.contenido {
+					order: 1;
+				}
+			}
+
+		}
+	}
+	.contenedor-proceso {
+		@include xy-grid();
+		margin-bottom: rem-calc(30);
+		.imagen {
+			@include xy-cell();
+			@include breakpoint(medium) {
+				@include xy-cell(1 of 2);
+			}
+		}
+		.contenido {
+			@include xy-cell();
+			@include breakpoint(medium) {
+				@include xy-cell(1 of 2);
+			}
+
+			h3 {
+				color: $primary-color;
+				@include text-transform(uppercase);
+			}
+		}
+	}
+}
