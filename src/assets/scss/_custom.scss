@@ -2,6 +2,10 @@
 // fuente de google
 $bellefair: 'Bellefair', serif;
 
+// COLORES
+$crema: #ebe7de;
+
+
 @mixin background-image($pagina) {
 	background-image: url(../img/background-#{$pagina}.jpg);
 
@@ -13,8 +17,52 @@ $bellefair: 'Bellefair', serif;
 	}	
 }
 
+body {
+	background-color: $crema;
+}
+
 .contenedor {
 	@include xy-grid-container;
+}
+
+.contenido-principal {
+	background-color: $white;
+	padding: rem-calc(10);
+	@include breakpoint(medium) {
+		margin-top: rem-calc(-120);
+		@include position(relative);
+		padding: rem-calc(50 80);
+
+	}
+}
+
+// Headings 
+.encabezado {
+	color: $secondary-color;
+	@include text-transform(uppercase);
+	font-size: rem-calc(18);
+	margin-bottom: rem-calc(100);
+	margin-top: rem-calc(40);
+	text-align: center;
+	span {
+		color: $primary-color;
+		font-size: rem-calc(38);
+		display: table;
+		margin: 0 auto;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		@include box(rem-calc(80), rem-calc(80));
+		background-size: rem-calc(80);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../img/grano-cafe.jpg);
+		margin-top: rem-calc(-15);
+	}
+
 }
 
 .icono-menu {
@@ -170,10 +218,10 @@ $bellefair: 'Bellefair', serif;
 .site-footer {
 	background-color: $primary-color;
 	.contenedor {
-		background-color: white;
 		.contenido-footer {
 			@include xy-grid();
 			@include padding(2, 2, 4, 2)
+			background-color: white;
 			.footer-box {
 				@include xy-cell();
 				@include margin(null, null, 2)
