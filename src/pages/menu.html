@@ -43,6 +43,20 @@ slogan: Disfruta nuestro delicioso menu
 					</li>
 				{{/each}}
 			</ul>
+			<ul class="listado-menu">
+				<h3>Comida</h3>
+				{{#each menucafe.comida}}
+					<li class="producto">
+						<div class="informacion">
+							<p class="nombre">{{this.name}}</p>
+							<p class="descripcion">{{this.desc}}</p>
+						</div>
+						<div class="precio">
+							<p>${{this.price}}</p>
+						</div>
+					</li>
+				{{/each}}
+			</ul>
 		</div>
 	</div>
 	

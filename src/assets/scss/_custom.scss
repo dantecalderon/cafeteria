@@ -356,6 +356,7 @@ blockquote {
 /** PAGINA MENU **/
 .pagina-menu {
 	@include xy-grid();
+	padding-bottom: 0;
 	.menu-descripcion {
 		@include xy-cell();
 
@@ -390,7 +391,7 @@ blockquote {
 	background-size: cover;
 	position: relative;
 	background-position: center center;
-	@include padding(1, null, 1, null);
+	@include padding(1, null, 4, null);
 
 
 	h2 {
