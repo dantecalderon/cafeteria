@@ -113,6 +113,10 @@ blockquote {
 	&.galeria {
 		@include background-image(galeria);
 	}
+	&.contacto {
+		@include background-image(contacto);
+	}
+
 
 	.header-superior {
 		@include xy-grid();
