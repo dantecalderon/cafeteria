@@ -107,6 +107,9 @@ blockquote {
 	&.proceso {
 		@include background-image(proceso);
 	}
+	&.menu {
+		@include background-image(menu);
+	}
 
 	.header-superior {
 		@include xy-grid();
