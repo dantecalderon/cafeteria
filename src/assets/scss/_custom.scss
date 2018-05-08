@@ -545,14 +545,15 @@ blockquote {
 			@include xy-cell(6);
 		}
 	}
+	.imagen {
+			background-color: cornflowerblue;
+		}
+
 
 	.derecha {
 		@include xy-cell(auto, true, $grid-margin-gutters, margin, left);
 
-		.imagen {
-			background-color: cornflowerblue;
-		}
-
+		
 		.contenido-derecha {
 			height: 100%;
 			@include xy-grid-container();
