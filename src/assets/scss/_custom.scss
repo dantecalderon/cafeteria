@@ -531,3 +531,48 @@ blockquote {
 		}
 	}
 }
+
+
+
+
+.galeria-inferior {
+	@include xy-grid();
+	margin-top: rem-calc(30);
+
+	.imagen {
+		@include xy-cell(3);
+		&.span {
+			@include xy-cell(6);
+		}
+	}
+
+	.derecha {
+		@include xy-cell(auto, true, $grid-margin-gutters, margin, left);
+
+		.imagen {
+			background-color: cornflowerblue;
+		}
+
+		.contenido-derecha {
+			height: 100%;
+			@include xy-grid-container();
+
+			.imagenes {
+				@include xy-grid(vertical);
+				@include flex-align();
+				height: 100%;
+				@include flex();
+
+				.imagen {
+					@include xy-cell(auto);
+					@include first-child() {
+						@include xy-gutters($grid-margin-gutters, margin,bottom);		
+					}
+					@include last-child() {
+						@include xy-gutters($grid-margin-gutters, margin,top);	
+					}
+				}
+			}
+		}
+	}
+}
