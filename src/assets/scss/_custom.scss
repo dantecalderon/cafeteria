@@ -483,11 +483,13 @@ blockquote {
 .galeria-superior {
 	@include xy-grid();
 	.izquierda {
-		@include xy-cell(3);
+		
+		@include xy-cell(3, true, $grid-margin-gutters, margin, left);
+
 	}
 
 	.derecha {
-		@include xy-cell(auto);
+		@include xy-cell(auto, true, $grid-margin-gutters, margin, left);
 		@include flex-align();
 		.contenido-derecha {	
 			@include flex();
@@ -500,6 +502,9 @@ blockquote {
 					background-color: cornflowerblue;
 					@include between(1, 2) {
 						@include xy-gutters($grid-margin-gutters, margin,bottom);					
+					}
+					@include between(3, 4) {
+						@include xy-gutters($grid-margin-gutters, margin,top);					
 					}
 					&.span {
 						@include xy-cell(66.6%);
