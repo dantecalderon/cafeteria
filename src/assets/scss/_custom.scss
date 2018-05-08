@@ -2,6 +2,17 @@
 // fuente de google
 $bellefair: 'Bellefair', serif;
 
+@mixin background-image($pagina) {
+	background-image: url(../img/background-#{$pagina}.jpg);
+
+	@include breakpoint(medium) {
+		background-image: url(../img/background-#{$pagina}.jpg);		
+	}
+	@include breakpoint(large) {
+		background-image: url(../img/background-#{$pagina}.jpg);
+	}	
+}
+
 .contenedor {
 	@include xy-grid-container;
 }
@@ -15,19 +26,19 @@ $bellefair: 'Bellefair', serif;
 		@include position(relative);
 	}
 	@include position(relative);
-
-	background-image: url(../img/coffe-background.jpg);
-
-	@include breakpoint(medium) {
-		background-image: url(../img/coffe-background.jpg);		
-	}
-	@include breakpoint(large) {
-		background-image: url(../img/coffe-background.jpg);
-	}
 	background-repeat: no-repeat;
 	height: 100vh;
 	min-height: rem-calc(600);
 	background-size: cover;
+
+
+	&.inicio {
+		@include background-image(inicio);
+	}	
+
+	&.nosotros {
+		@include background-image(nosotros);
+	}
 
 	.header-superior {
 		@include xy-grid();
