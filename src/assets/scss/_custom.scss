@@ -585,3 +585,46 @@ blockquote {
 		}
 	}
 }
+
+/** PAGINA CONTACTO **/
+
+.pagina-contacto {
+	background-image: url(../img/granos-cafe-background.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 45%;
+
+	@include xy-grid();
+
+	.formulario-reservacion {
+		@include xy-cell();
+		@include breakpoint(medium) {
+			@include xy-cell(9);
+		}
+		@include breakpoint(large) {
+			@include xy-cell(6);
+		}
+	}
+}
+
+.campo {
+	label {
+		font-size: rem-calc(20);
+		@include text-transform(uppercase);
+		@include font-bold();
+	}
+
+	input, select, input:focus {
+		border: rem-calc(5) solid $primary-color;
+		height: rem-calc(50);		
+	}
+
+	.btn_enviar {
+		@include font-bold();
+		@include text-transform(uppercase);
+		font-size: rem-calc(18);
+		width: 100%;
+		height: auto;
+		margin-top: rem-calc(20);
+	}
+}
