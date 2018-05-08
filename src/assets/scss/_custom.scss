@@ -477,3 +477,35 @@ blockquote {
 		}
 	}
 }
+
+/** GALERIA **/
+
+.galeria-superior {
+	@include xy-grid();
+	.izquierda {
+		@include xy-cell(3);
+	}
+
+	.derecha {
+		@include xy-cell(auto);
+		@include flex-align();
+		.contenido-derecha {	
+			@include flex();
+			height: 100%;
+			.imagenes {
+				@include xy-grid();
+				flex: 1;
+				.imagen {
+					@include xy-cell(33.3%);
+					background-color: cornflowerblue;
+					@include between(1, 2) {
+						@include xy-gutters($grid-margin-gutters, margin,bottom);					
+					}
+					&.span {
+						@include xy-cell(66.6%);
+					}
+				}
+			}
+		}
+	}
+}
