@@ -110,6 +110,9 @@ blockquote {
 	&.menu {
 		@include background-image(menu);
 	}
+	&.galeria {
+		@include background-image(galeria);
+	}
 
 	.header-superior {
 		@include xy-grid();
