@@ -7,13 +7,13 @@ $crema: #ebe7de;
 
 
 @mixin background-image($pagina) {
-	background-image: url(../img/background-#{$pagina}.jpg);
+	background-image: url(../img/destacadas/chico/#{$pagina}.jpg);
 
 	@include breakpoint(medium) {
-		background-image: url(../img/background-#{$pagina}.jpg);		
+		background-image: url(../img/destacadas/mediano/#{$pagina}.jpg);		
 	}
 	@include breakpoint(large) {
-		background-image: url(../img/background-#{$pagina}.jpg);
+		background-image: url(../img/destacadas/grande/#{$pagina}.jpg);
 	}	
 }
 
