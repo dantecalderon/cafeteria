@@ -8,16 +8,18 @@ slogan: Mejores granos, mejor cafe
 		<h2 class="encabezado">Reserva tu <span>mesa</span></h2>
 
 		<div class="formulario-reservacion">
-			<form method="post" id="formulario">
+			<form method="post" id="formulario" data-abide novalidate>
 				<div class="campo">
 					<label for="nombre">Nombre
-						<input type="text" id="name" placeholder="Nombre" name="nombre">
+						<input type="text" id="name" placeholder="Nombre" name="nombre" required>
+						<span class="form-error">Error! El nombre no puede ir vacio</span>
 					</label>
 
 				</div>
 				<div class="campo">
 					<label for="email">Email
-						<input type="email" id="email" placeholder="Email" name="email">
+						<input type="text" id="email" placeholder="Email" name="email" required pattern="email">
+						<span class="form-error">Error! Correo vacio o invalido</span>
 					</label>
 
 				</div>
@@ -45,7 +47,8 @@ slogan: Mejores granos, mejor cafe
 				</div>
 				<div class="campo">
 					<label for="fecha">Fecha
-						<input type="date" id="fecha" placeholder="Fecha" name="fecha">
+						<input type="text" id="fecha" placeholder="DD/MM/AA" name="fecha" required pattern="day_month_year">
+						<span class="form-error">Error! Fecha vacia o no valida</span>
 					</label>
 
 				</div>
