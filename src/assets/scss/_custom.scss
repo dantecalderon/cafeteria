@@ -628,3 +628,50 @@ blockquote {
 		margin-top: rem-calc(20);
 	}
 }
+
+
+.pagina-inicio {
+	p {
+		@include breakpoint(medium) {
+			@include xy-cell(80%);
+			@include xy-cell-offset(10%);
+			text-align: center;
+			line-height: rem-calc(40);
+			font-size: rem-calc(18);
+		}
+	}
+}
+
+.categoria-iconos {
+	@include xy-grid();
+	.icono {
+		@include xy-cell();
+		@include breakpoint(medium) {
+			@include xy-cell(1 of 3);
+		}
+		height: rem-calc(260);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: rem-calc(120%);
+		
+		@include flex-align(center, bottom);
+		@include flex();
+		&.cafe {
+			background-image: url(../img/icono-cafe.jpg);		
+		}
+
+		&.postre {
+			background-image: url(../img/icono-postre.jpg);
+		}
+
+		&.te {
+			background-image: url(../img/icono-te.jpg);
+		}
+
+		h3 {
+			font-family: $bellefair;
+			color: $primary-color;
+			font-size: rem-calc(38);
+		}
+	}
+}
