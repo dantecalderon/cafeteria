@@ -75,7 +75,7 @@ blockquote {
 		background-size: rem-calc(80);
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url(../img/grano-cafe.jpg);
+		background-image: url(../img/coffee.svg);
 		margin-top: rem-calc(-15);
 	}
 
@@ -601,6 +601,7 @@ blockquote {
 	background-image: url(../img/granos_cafe.jpg);
 	background-repeat: no-repeat;
 	background-position: right center;
+
 	background-size: 30%;
 
 	@include xy-grid();
@@ -666,15 +667,15 @@ blockquote {
 		@include flex-align(center, bottom);
 		@include flex();
 		&.cafe {
-			background-image: url(../img/icono-cafe.jpg);		
+			background-image: url(../img/icono_cafe.svg);		
 		}
 
 		&.postre {
-			background-image: url(../img/icono-postre.jpg);
+			background-image: url(../img/icono_postre.svg);
 		}
 
 		&.te {
-			background-image: url(../img/icono-te.jpg);
+			background-image: url(../img/icono_te.svg);
 		}
 
 		h3 {
