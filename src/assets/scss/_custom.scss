@@ -185,6 +185,15 @@ blockquote {
 	}
 }
 
+/** Navegacion motion ui **/
+.menu-in {	
+	@include mui-zoom(in, 0.1, 1);
+}
+
+.menu-out {
+	@include mui-zoom(out, 1, .1);
+}
+
 
 .navegaciones {
 	@include xy-cell();
